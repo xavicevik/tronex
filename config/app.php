@@ -15,7 +15,9 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Tresases'),
+
+    'regxpage' => env('MAX_CANT_REG_PAGE', 3),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +71,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Bogota',
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +84,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +97,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -124,24 +126,6 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Maintenance Mode Driver
-    |--------------------------------------------------------------------------
-    |
-    | These configuration options determine the driver used to determine and
-    | manage Laravel's "maintenance mode" status. The "cache" driver will
-    | allow maintenance mode to be controlled across multiple machines.
-    |
-    | Supported drivers: "file", "cache"
-    |
-    */
-
-    'maintenance' => [
-        'driver' => 'file',
-        // 'store'  => 'redis',
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -182,6 +166,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Darryldecode\Cart\CartServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -194,6 +181,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
 
     ],
 
@@ -210,6 +199,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
     ])->toArray(),
 
 ];
