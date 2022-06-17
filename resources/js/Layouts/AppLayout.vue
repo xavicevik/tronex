@@ -111,7 +111,7 @@ export default {
                         </span>
                         <li class="px-5 md:block">
                             <div class="flex flex-row items-center h-8">
-                                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Main</div>
+                                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Principal</div>
                             </div>
                         </li>
                         <li>
@@ -258,7 +258,7 @@ export default {
                         </li>
                         <li class="px-5 hidden md:block">
                             <div class="flex flex-row items-center mt-5 h-8">
-                                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Settings</div>
+                                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Configuración</div>
                             </div>
                         </li>
                         <li>
