@@ -151,7 +151,6 @@
                                         <h2 v-text="tituloModal" class="text-lg font-bold text-gray-900 px-4 py-4"></h2>
                                     </div>
 
-
                                     <section class="mx-auto">
                                         <div class="">
                                             <h2 class="text-xl font-bold text-gray-900 px-4 py-2">Crear Programa</h2>
